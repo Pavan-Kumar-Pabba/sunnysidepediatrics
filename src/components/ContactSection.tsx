@@ -82,8 +82,8 @@ export const ContactSection = () => {
                 <div>
                   <h3 className="font-semibold text-primary mb-2">Office Hours</h3>
                   <div className="text-muted-foreground space-y-1">
-                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Monday - Friday: 8:30 AM - 5:00 PM</p>
+                    <p>Saturday: Closed</p>
                     <p>Sunday: Closed</p>
                     <p className="text-sm text-secondary mt-2">
                       *Emergency appointments available

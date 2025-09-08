@@ -78,6 +78,34 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Header with Logo */}
+      <header className="absolute top-0 left-0 right-0 z-20 bg-white/10 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <img 
+                src="/lovable-uploads/0aa46d63-b681-4fff-a8d0-58bfc20a1328.png" 
+                alt="SunnySide Pediatrics Logo" 
+                className="h-12 w-12"
+              />
+              <div className="text-white">
+                <h1 className="text-xl font-bold">SunnySide Pediatrics</h1>
+                <p className="text-sm opacity-90">Griffin, GA</p>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-6 text-white">
+              <a href="tel:770-233-4668" className="hover:text-yellow-300 transition-colors">
+                <Phone className="inline h-4 w-4 mr-1" />
+                (770) 233-4668
+              </a>
+              <a href="https://sunnysidepediatrics.com" className="hover:text-yellow-300 transition-colors">
+                sunnysidepediatrics.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
@@ -87,6 +115,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90" />
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/lovable-uploads/0aa46d63-b681-4fff-a8d0-58bfc20a1328.png" 
+              alt="SunnySide Pediatrics Logo" 
+              className="h-24 w-24 md:h-32 md:w-32"
+            />
+          </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             SunnySide Pediatrics
           </h1>
@@ -257,8 +292,8 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Office Hours</h4>
               <div className="text-gray-300 space-y-1">
-                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Monday - Friday: 8:30 AM - 5:00 PM</p>
+                <p>Saturday: Closed</p>
                 <p>Sunday: Closed</p>
               </div>
             </div>
