@@ -42,7 +42,7 @@ const Index = () => {
       education: "University of Mysore / Adichunchanagiri Institute of Medical Science (1987)",
       affiliations: ["Wellstar Spalding Medical Center"],
       services: ["Well-Child Care", "Telehealth Appointments", "Preventive Medicine", "Chronic Disease Management"],
-      imagePath: "/lovable-uploads/fdfe85f6-1f3c-4561-9354-e9e187dbe418.png"
+      imagePath: "/lovable-uploads/ff59fd4c-8eeb-4038-af0a-dcc72dcf0cd9.png"
     },
     {
       name: "Jose Rios, MD", 
@@ -52,7 +52,7 @@ const Index = () => {
       education: "Board Certified in Pediatrics",
       affiliations: ["Wellstar Cobb Medical Center"],
       services: ["New Patient Care", "Acute Care", "Developmental Assessments", "Family Medicine"],
-      imagePath: "/lovable-uploads/3048296b-4012-4a1a-b167-4151a9932479.png"
+      imagePath: "/lovable-uploads/30c518d3-b0e7-4549-b315-0fdcd9431b21.png"
     }
   ];
 
@@ -238,7 +238,12 @@ const Index = () => {
               <h3 className="text-xl font-bold mb-4">SunnySide Pediatrics, LLC</h3>
               <p className="text-gray-300 mb-2">1661 West McIntosh Road</p>
               <p className="text-gray-300 mb-2">Griffin, GA 30223</p>
-              <p className="text-gray-300">(770) 233-4668</p>
+              <p className="text-gray-300 mb-2">(770) 233-4668</p>
+              <p className="text-gray-300">
+                <a href="https://sunnysidepediatrics.com" className="hover:text-white transition-colors">
+                  sunnysidepediatrics.com
+                </a>
+              </p>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>

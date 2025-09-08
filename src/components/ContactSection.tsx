@@ -63,6 +63,21 @@ export const ContactSection = () => {
               </div>
 
               <div className="flex items-start space-x-4">
+                <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-primary mb-1">Website</h3>
+                  <a 
+                    href="https://sunnysidepediatrics.com" 
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    sunnysidepediatrics.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
                 <Clock className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-primary mb-2">Office Hours</h3>
