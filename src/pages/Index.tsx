@@ -78,10 +78,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Header with Logo */}
+      {/* Header with Logo and Contact */}
       <header className="absolute top-0 left-0 right-0 z-20 bg-white/10 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center space-x-4">
               <img 
                 src="/lovable-uploads/0aa46d63-b681-4fff-a8d0-58bfc20a1328.png" 
@@ -93,12 +93,12 @@ const Index = () => {
                 <p className="text-sm opacity-90">Griffin, GA</p>
               </div>
             </div>
-            <div className="hidden md:flex items-center space-x-6 text-white">
-              <a href="tel:770-233-4668" className="hover:text-yellow-300 transition-colors">
+            <div className="flex flex-col sm:flex-row items-end sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 text-white text-sm">
+              <a href="tel:770-233-4668" className="hover:text-yellow-300 transition-colors font-semibold">
                 <Phone className="inline h-4 w-4 mr-1" />
                 (770) 233-4668
               </a>
-              <a href="https://sunnysidepediatrics.com" className="hover:text-yellow-300 transition-colors">
+              <a href="https://sunnysidepediatrics.com" className="hover:text-yellow-300 transition-colors opacity-90">
                 sunnysidepediatrics.com
               </a>
             </div>
