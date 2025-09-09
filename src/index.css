@@ -43,12 +43,6 @@ All colors MUST be HSL.
     --medical-green-light: 142 69% 85%;
     --warm-gray: 215 15% 55%;
     --soft-white: 210 17% 98%;
-    
-    /* SunnySide branding colors */
-    --sunny-yellow: 45 100% 50%;
-    --sunny-yellow-light: 45 100% 85%;
-    --sunny-orange: 35 100% 60%;
-    --sunny-orange-light: 35 100% 85%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(210 100% 45%), hsl(210 80% 55%));

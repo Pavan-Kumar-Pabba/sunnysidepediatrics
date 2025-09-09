@@ -35,12 +35,6 @@ export default {
           gray: "hsl(var(--warm-gray))",
           white: "hsl(var(--soft-white))",
         },
-        sunny: {
-          yellow: "hsl(var(--sunny-yellow))",
-          "yellow-light": "hsl(var(--sunny-yellow-light))",
-          orange: "hsl(var(--sunny-orange))",
-          "orange-light": "hsl(var(--sunny-orange-light))",
-        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
