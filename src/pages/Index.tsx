@@ -17,7 +17,12 @@ import {
   Activity,
   Syringe,
   Eye,
-  Thermometer
+  Thermometer,
+  Menu,
+  CreditCard,
+  FileText,
+  MessageSquare,
+  UserCircle
 } from "lucide-react";
 import heroImage from "@/assets/hero-pediatrics.jpg";
 
@@ -77,133 +82,161 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen">
-      {/* Header with Logo and Contact */}
-      <header className="absolute top-0 left-0 right-0 z-20 bg-white/10 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between flex-wrap gap-4">
+    <div className="min-h-screen bg-white">
+      {/* Header with Navigation */}
+      <header className="bg-white shadow-sm border-b">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-4">
               <img 
                 src="/lovable-uploads/0aa46d63-b681-4fff-a8d0-58bfc20a1328.png" 
                 alt="SunnySide Pediatrics Logo" 
                 className="h-12 w-12"
               />
-              <div className="text-white">
-                <h1 className="text-xl font-bold">SunnySide Pediatrics</h1>
-                <p className="text-sm opacity-90">Griffin, GA</p>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900">Sunnyside Pediatrics</h1>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-end sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 text-white text-sm">
-              <a href="tel:770-233-4668" className="hover:text-yellow-300 transition-colors font-semibold">
+            
+            {/* Navigation Menu */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              <a href="#" className="text-gray-700 hover:text-primary font-medium transition-colors">HOME</a>
+              <a href="#messages" className="text-gray-700 hover:text-primary font-medium transition-colors">MESSAGES FROM THE DOCTORS</a>
+              <a href="#medical-records" className="text-gray-700 hover:text-primary font-medium transition-colors">MEDICAL RECORDS</a>
+              <a href="#billing" className="text-gray-700 hover:text-primary font-medium transition-colors">BILLING</a>
+              <a href="#patient-portal" className="text-gray-700 hover:text-primary font-medium transition-colors">PATIENT PORTAL</a>
+            </nav>
+            
+            {/* Contact Info */}
+            <div className="flex items-center space-x-4 text-sm">
+              <a href="tel:770-233-4668" className="text-primary font-semibold hover:text-primary/80 transition-colors">
                 <Phone className="inline h-4 w-4 mr-1" />
                 (770) 233-4668
               </a>
-              <a href="https://sunnysidepediatrics.com" className="hover:text-yellow-300 transition-colors opacity-90">
-                sunnysidepediatrics.com
-              </a>
             </div>
+            
+            {/* Mobile Menu Button */}
+            <Button variant="ghost" size="sm" className="lg:hidden">
+              <Menu className="h-5 w-5" />
+            </Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90" />
-        
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-8">
-            <img 
-              src="/lovable-uploads/0aa46d63-b681-4fff-a8d0-58bfc20a1328.png" 
-              alt="SunnySide Pediatrics Logo" 
-              className="h-24 w-24 md:h-32 md:w-32"
-            />
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            SunnySide Pediatrics
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-95">
-            Comprehensive pediatric care with compassion, expertise, and dedication to your child's health
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg font-semibold"
-              onClick={() => setShowAppointmentForm(true)}
-            >
-              <Calendar className="mr-2 h-5 w-5" />
-              Book Appointment
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-primary h-14 px-8 text-lg font-semibold"
-              onClick={() => window.open('tel:770-233-4668')}
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Call (770) 233-4668
-            </Button>
+      <section className="relative bg-gradient-to-r from-sunny-orange to-sunny-yellow">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div className="text-white">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+                Welcome to Sunnyside Pediatrics
+              </h1>
+              <p className="text-xl mb-8 opacity-95">
+                Providing exceptional pediatric care with compassion and expertise for your child's health and development.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg font-semibold"
+                  onClick={() => setShowAppointmentForm(true)}
+                >
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Book Appointment
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-primary h-14 px-8 text-lg font-semibold"
+                  onClick={() => window.open('tel:770-233-4668')}
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call (770) 233-4668
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/d1be701b-d9cc-479e-b378-7502b5582904.png" 
+                alt="Happy family with baby" 
+                className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-16 bg-background">
+      {/* Patient Portal & Services Section */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Welcome to SunnySide Pediatrics
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Located in Griffin, GA, we provide exceptional pediatric healthcare with a commitment to nurturing 
-              healthy, happy children. Our experienced team offers comprehensive medical services in a warm, 
-              welcoming environment designed specifically for children and their families.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {[
-              { icon: Heart, title: "Compassionate Care", description: "We treat every child with love and understanding" },
-              { icon: Shield, title: "Trusted Expertise", description: "Decades of combined pediatric experience" },
-              { icon: Users, title: "Family-Centered", description: "We partner with families for better health outcomes" },
-              { icon: Award, title: "Quality Service", description: "Committed to excellence in pediatric healthcare" },
-            ].map((feature, index) => (
-              <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-card to-medical-white">
-                <CardContent className="pt-6">
-                  <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-primary mb-2">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center mb-6">
+                <div className="bg-sunny-yellow rounded-full p-3 mr-4">
+                  <img 
+                    src="/lovable-uploads/0aa46d63-b681-4fff-a8d0-58bfc20a1328.png" 
+                    alt="SunnySide Pediatrics Logo" 
+                    className="h-8 w-8"
+                  />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">Sunnyside Pediatrics</h2>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="border border-gray-200 rounded-lg p-6 bg-white">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Have you signed up for our Patient Portal?</h3>
+                  <p className="text-gray-600 mb-4">Click here for more information.</p>
+                  <Button 
+                    variant="outline" 
+                    className="border-primary text-primary hover:bg-primary hover:text-white"
+                    onClick={() => setShowAppointmentForm(true)}
+                  >
+                    <UserCircle className="mr-2 h-4 w-4" />
+                    Patient Portal
+                  </Button>
+                </div>
+                
+                <Button 
+                  className="bg-sunny-yellow text-gray-900 hover:bg-sunny-yellow/90 px-8 py-3 text-lg font-semibold"
+                  onClick={() => window.open('#billing')}
+                >
+                  <CreditCard className="mr-2 h-5 w-5" />
+                  Pay Your Bill
+                </Button>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/fdfe85f6-1f3c-4561-9354-e9e187dbe418.png" 
+                alt="Happy diverse children" 
+                className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-gradient-to-br from-muted/30 to-medical-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Our Pediatric Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Comprehensive healthcare services designed to support your child's growth and development
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-sunny-yellow">
                 <CardHeader className="text-center">
                   <service.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                   <CardTitle className="text-lg text-primary">{service.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground text-center">{service.description}</p>
+                  <p className="text-gray-600 text-center">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -234,8 +267,50 @@ const Index = () => {
       {/* Contact Section */}
       <ContactSection />
 
+      {/* Quick Links Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-primary mb-12">
+            Quick Access
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <Card className="text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer" onClick={() => setShowAppointmentForm(true)}>
+              <CardContent className="pt-6">
+                <Calendar className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Book Appointment</h3>
+                <p className="text-sm text-gray-600">Schedule your child's visit online</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+              <CardContent className="pt-6">
+                <MessageSquare className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Messages</h3>
+                <p className="text-sm text-gray-600">Connect with your doctors</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+              <CardContent className="pt-6">
+                <FileText className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Medical Records</h3>
+                <p className="text-sm text-gray-600">Access patient information</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+              <CardContent className="pt-6">
+                <CreditCard className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-primary mb-2">Billing</h3>
+                <p className="text-sm text-gray-600">Pay bills and view statements</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Call-to-Action Section */}
-      <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-16 bg-gradient-to-r from-sunny-orange to-sunny-yellow text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Schedule Your Child's Appointment?
@@ -270,12 +345,19 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">SunnySide Pediatrics, LLC</h3>
+              <div className="flex items-center mb-4">
+                <img 
+                  src="/lovable-uploads/0aa46d63-b681-4fff-a8d0-58bfc20a1328.png" 
+                  alt="SunnySide Pediatrics Logo" 
+                  className="h-8 w-8 mr-3"
+                />
+                <h3 className="text-xl font-bold">SunnySide Pediatrics, LLC</h3>
+              </div>
               <p className="text-gray-300 mb-2">1661 West McIntosh Road</p>
               <p className="text-gray-300 mb-2">Griffin, GA 30223</p>
               <p className="text-gray-300 mb-2">(770) 233-4668</p>
               <p className="text-gray-300">
-                <a href="https://sunnysidepediatrics.com" className="hover:text-white transition-colors">
+                <a href="https://sunnysidepediatrics.com" className="hover:text-sunny-yellow transition-colors">
                   sunnysidepediatrics.com
                 </a>
               </p>
@@ -283,10 +365,11 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="#services" className="hover:text-white transition-colors">Our Services</a></li>
-                <li><a href="#doctors" className="hover:text-white transition-colors">Our Doctors</a></li>
-                <li><Button variant="link" className="p-0 h-auto text-gray-300 hover:text-white" onClick={() => setShowAppointmentForm(true)}>Book Appointment</Button></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="#services" className="hover:text-sunny-yellow transition-colors">Our Services</a></li>
+                <li><a href="#doctors" className="hover:text-sunny-yellow transition-colors">Our Doctors</a></li>
+                <li><Button variant="link" className="p-0 h-auto text-gray-300 hover:text-sunny-yellow" onClick={() => setShowAppointmentForm(true)}>Book Appointment</Button></li>
+                <li><a href="#patient-portal" className="hover:text-sunny-yellow transition-colors">Patient Portal</a></li>
+                <li><a href="#billing" className="hover:text-sunny-yellow transition-colors">Billing</a></li>
               </ul>
             </div>
             <div>
